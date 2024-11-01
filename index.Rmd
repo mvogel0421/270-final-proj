@@ -30,3 +30,51 @@ Outcome Variable
 - Increases in size of the Republican Party, but more specifically, a morphing of its base.
 
 Support for my hypohtesis would be found if I do in fact collect a considerable amount of data that proves there was growth within the Republican party and that its supporters changed since Trump.
+
+##Milestone 3
+
+## Load the Condensed Dataset
+
+```{r}
+library(tidyverse)
+library(readr)
+library(dplyr)
+anes_data <- read_csv("anes_condensed.csv")
+```
+
+##Preliminary Data Wrangling
+
+I will be utilizing the below three data frames to see if there is a rise in anti-gay sentiment among republican voters, before vs. after Trump's rise. 
+
+Notes for renaming: VCF0004 is Year, VCF0302 IS Party Identification, VCF0878 is thoughts on gay adoption
+
+## Filtration and Wrangling
+
+```{r}
+anes_republican <- anes_data |>
+  filter(VCF0302 == 1) |>
+  select(
+    Year = VCF0004,
+    Party = VCF0302,
+    Gay_Adopt = VCF0878
+  ) |>
+  mutate(Era = ifelse(Year < 2016, "Pre Trump", "Trump-Era")) |>
+  filter(Gay_Adopt != 8) |>
+  mutate(Gay_Adopt = ifelse(Gay_Adopt == 1, "Support", "Oppose")) |>
+  drop_na(Gay_Adopt)
+```
+## Visualization
+
+```{r}
+ggplot(anes_republican, aes( x = Gay_Adopt)) +
+  geom_bar(color = "indianred1") +
+  facet_wrap(~Era) +
+  labs(
+    title = "Republican Voters' Sentiment on Gay/Lesbian Adoption of Children",
+    subtitle = "Comparing the Pre and Post Trump Landscape",
+    x = "Position on Gay/Lesbian Adoption Rights",
+    y = "Number of Republican Respondents"
+  ) +
+  theme_minimal()
+```
+```
