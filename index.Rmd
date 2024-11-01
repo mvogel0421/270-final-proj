@@ -22,9 +22,9 @@ To what extent has Donald Trump and the Maga-Era of Republican politics changed 
 I believe that Donald Trump's rise as the leader of the Republican party stems from a multitude of complex social, economic, and political factors. That is not exactly what I seek to answer. We all know that Donald Trump came to the scene different than any other politicians that remain in our recent memories, harping on racial messaging and xenophobic ideas, Donald Trump isn't just a public bigot, he has become the living light of American conservatism by combining these new tactics with the historical agenda of the GOP. Considering this, I want to discover how the Republican base has changed, and what this may spell for the future of American bipartisanship in the capital.
 
 
-Explanatory Variables: 
+Explanatory Variables:
 - Changes in voter demographics
-- changes in political ideology among voting base
+- changes in political ideology among voters
 
 Outcome Variable
 - Increases in size of the Republican Party, but more specifically, a morphing of its base.
