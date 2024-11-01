@@ -1,6 +1,6 @@
 ---
 title: "PS270 Final Project"
-author: "Your Name Here"
+author: "Miles Vogel"
 description: "My final project"
 output:
   distill::distill_article:
@@ -9,6 +9,24 @@ output:
 
 
 
-## Project thoughts
+## Project Idea
 
 I am interested in exploring data related to...
+
+the immense changes we have witnessed occuring within the Republican party since the rise of Donald Trump. I would like to use various figures and statistical evidence to show numerous ways in which the Republican base has shifted since Donald Trump's rise to prominence during the 2016 election cycle. I want to note how past Republicans vote, and whether there are new trends within the reawakened conservative base
+
+## Final Project Milestone 2
+
+To what extent has Donald Trump and the Maga-Era of Republican politics changed the compositions and backing of the GOP, how are these voters different/similar to Republican voters in the past, in regards to the social context of just how different politics feel to compared how they did during the Obama and Bush administrations, for instance.
+
+I believe that Donald Trump's rise as the leader of the Republican party stems from a multitude of complex social, economic, and political factors. That is not exactly what I seek to answer. We all know that Donald Trump came to the scene different than any other politicians that remain in our recent memories, harping on racial messaging and xenophobic ideas, Donald Trump isn't just a public bigot, he has become the living light of American conservatism by combining these new tactics with the historical agenda of the GOP. Considering this, I want to discover how the Republican base has changed, and what this may spell for the future of American bipartisanship in the capital.
+
+
+Explanatory Variables: 
+- Changes in voter demographics
+- changes in political ideology among voting base
+
+Outcome Variable
+- Increases in size of the Republican Party, but more specifically, a morphing of its base.
+
+Support for my hypohtesis would be found if I do in fact collect a considerable amount of data that proves there was growth within the Republican party and that its supporters changed since Trump.
