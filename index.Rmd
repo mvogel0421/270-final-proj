@@ -66,15 +66,30 @@ anes_republican <- anes_data |>
 ## Visualization
 
 ```{r}
-ggplot(anes_republican, aes( x = Gay_Adopt)) +
-  geom_bar(color = "indianred1") +
+ggplot(anes_republican, aes( x = Gay_Adopt, fill = Gay_Adopt)) +
+  geom_bar(color = "black") +
   facet_wrap(~Era) +
+  #Separate colors for oppose and support
+  scale_fill_manual(values = c("Oppose" = "indianred1", "Support" = "dodgerblue"))+
   labs(
     title = "Republican Voters' Sentiment on Gay/Lesbian Adoption of Children",
     subtitle = "Comparing the Pre and Post Trump Landscape",
     x = "Position on Gay/Lesbian Adoption Rights",
     y = "Number of Republican Respondents"
   ) +
-  theme_minimal()
+  theme_minimal() +
+  #remove legend
+  theme(legend.position = "none")
 ```
+Source: American National Election Survey (ANES)
+
+## Milestone 4 -- Second Visualization/Table
+
+```{r}
+library(knitr)
+sum_up_table <- anes_republican |>
+  group_by(Era, Gay_Adopt) |>
+  summarize(Count = n())
+kable(sum_up_table, col.names = c("Era", "Position on LGBT+ Adoption of Children", "Number of Respondents"),
+      caption = "Pre and Post-Trump Sentiment on LGBT Child Adoption")
 ```
