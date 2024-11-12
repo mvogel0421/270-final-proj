@@ -13,23 +13,29 @@ output:
 
 I am interested in exploring data related to...
 
-the immense changes we have witnessed occuring within the Republican party since the rise of Donald Trump. I would like to use various figures and statistical evidence to show numerous ways in which the Republican base has shifted since Donald Trump's rise to prominence during the 2016 election cycle. I want to note how past Republicans vote, and whether there are new trends within the reawakened conservative base
+the immense changes we have witnessed occuring within the Republican party since the rise of Donald Trump. I would like to use various figures and statistical evidence to show numerous ways in which the Republican base has shifted since Donald Trump's rise to prominence during the 2016 election cycle. I want to analyze whether Trump's rise has fostered an increase in hateful rhetoric in the United States.
 
 ## Project Milestone 2
 
 To what extent has Donald Trump and the Maga-Era of Republican politics changed the compositions and backing of the GOP, how are these voters different/similar to Republican voters in the past, in regards to the social context of just how different politics feel to compared how they did during the Obama and Bush administrations, for instance.
 
-I believe that Donald Trump's rise as the leader of the Republican party stems from a multitude of complex social, economic, and political factors. That is not exactly what I seek to answer. We all know that Donald Trump came to the scene different than any other politicians that remain in our recent memories, harping on racial messaging and xenophobic ideas, Donald Trump isn't just a public bigot, he has become the living light of American conservatism by combining these new tactics with the historical agenda of the GOP. Considering this, I want to discover how the Republican base has changed, and what this may spell for the future of American bipartisanship in the capital.
+I believe that Donald Trump's rise as the leader of the Republican party stems from a multitude of complex social, economic, and political factors. That is not exactly what I seek to answer. We all know that Donald Trump came to the scene different than any other politicians that remain in our recent memories, harping on racial messaging and xenophobic ideas, Donald Trump has managed to engage with an entirely new section of the political community that in previous elections did not care much for politics. He has become the living light of American conservatism by combining these new tactics with the historical agenda of the GOP. Economic conservatism combined with cultural conservatism has allowed Trump's grip on middle America to be virtually unquestioned, as seen in his successes across the board in nearly every American county in the 2024 election. 
+
+While Donald Trump has been generally careful to not say anything too outwardly offensive on a public platform, there is no doubt that his base and a large portion of his supporters carry such views and see Donald Trump as a protector of these forms of prejudice.
+
+So, in the light of Trump's rise and his recent re-taking of the White House, has his, now, decade of political prominence resulted in an increase in hateful rhetoric and ideas. In this article, we will dive into measurements of support for LGBT+ families being able to adopt children. Has there been an increase in opposition to this basic right of an adult individual, or, in spite of Trump's volatility and perceived bigotry, is our society becoming more pluralistic?
+
+Most of us still clearly remember when gay marriage was officially legalized under the Obama administration. This enactment was met with plenty of conservative backlash, so, now, over a decade later in 2024, do conservatives, and particularly Trump voters hold more, less, or similar prejudice towards the LGBT+ community than during Obama's terms.
 
 
 Explanatory Variables:
 - Changes in voter demographics
-- changes in political ideology among voters
+- changes in political ideology among voters (opinion on gay adoption)
 
 Outcome Variable
-- Increases in size of the Republican Party, but more specifically, a morphing of its base.
+- Increases in size of the Republican Party, but more specifically, a morphing of its base. (Is there more opposition to LGBT+ adoption)
 
-Support for my hypohtesis would be found if I do in fact collect a considerable amount of data that proves there was growth within the Republican party and that its supporters changed since Trump.
+Support for my hypothesis would be found if I do in fact find sufficient evidence that hate or negative feelings towards the LGBT+ community and its members' attempts to start families has risen since Trump first started captivating Americans by the millions.
 
 ## Project Milestone 3
 
@@ -80,7 +86,7 @@ ggplot(anes_republican, aes( x = Gay_Adopt, fill = Gay_Adopt)) +
   #remove legend
   theme(legend.position = "none")
 ```
-Source: American National Election Survey (ANES)
+Source: American National Election Studies (ANES)
 
 ## Project Milestone 4
 
@@ -94,3 +100,6 @@ sum_up_table <- anes_republican |>
 kable(sum_up_table, col.names = c("Era", "Position on LGBT+ Adoption of Children", "Number of Respondents"),
       caption = "Pre and Post-Trump Sentiment on LGBT Child Adoption")
 ```
+Source: American National Election Studies (ANES)
+
+This data proves my hypothesis wrong. Although Donald Trump's presidency and future term have been highlighted by various instances of racial, cultural antagonism, support for LGBT+ adoption has actually increased. This is very interesting to me. A major concern for liberals this cycle was Trump and his base's desire to limit freedoms for the LGBT+ community, but clearly, the majority of voters support the security of basic liberties and the ability to form a family for these individuals. Now, I am led to believe that this increase is in part due to the successes of previous administrations and continued efforts to de-stigmatize previously marginalized members of society. For years now, gay marriage has been legal, and at this point, Americans would likely categorize it as just a fact-of-life. Even if one is opposed to same-sex relations, the legality of their love and marriage is secured. Although Trump's campaign this year often focused on sex changes for illegals and other volatile rhetoric attacking those who identify with the pronouns they/them in our society, most of his supporters believe in basic rights for all of these people. Instead, his voters are much more likely to be uncomfortable with aspects of LGBT+ life bleeding into their own. This, of course, is a problem. We need our society to be more accepting of people, regardless of race, sexual orientation, creed, etc. Yet, in spite of this, there is no significant evidence proving that Donald Trump has led an effort to outright oppress and subjugate the LGBT+ community. 
