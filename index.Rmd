@@ -7,7 +7,23 @@ output:
     self_contained: false
 ---
 
-## Introduction:
+```{r}
+library(readr)
+library(ggplot2)
+library(knitr)
+library(infer)
+library(dplyr)
+library(tidyverse)
+```
+
+```{r}
+library(tidyverse)
+library(readr)
+library(dplyr)
+anes_data <- read_csv("anes_condensed.csv")
+```
+
+## Section 1: Introduction:
 
 I am interested in exploring data related to...
 
@@ -42,23 +58,18 @@ Outcome Variable
 
 In other words, support for my hypothesis would be found if I do in fact find sufficient evidence that hate or negative feelings towards the LGBT+ community and its members' attempts to start families has risen since Trump first started captivating Americans by the millions.
 
-## Project Milestone 3
+## Section 2: Data
+
+Describe the Data Source
+
+How are the independent and dependent variables measured?
 
 
-```{r}
-library(tidyverse)
-library(readr)
-library(dplyr)
-anes_data <- read_csv("anes_condensed.csv")
-```
-
-Preliminary Data Wrangling
+#Preliminary Data Wrangling
 
 I will be utilizing the below three data frames to see if there is a rise in anti-gay sentiment among republican voters, before vs. after Trump's rise. 
 
 Notes for renaming: VCF0004 is Year, VCF0302 IS Party Identification, VCF0878 is thoughts on gay adoption
-
-# Filtration and Wrangling
 
 ```{r}
 anes_republican <- anes_data |>
@@ -73,7 +84,24 @@ anes_republican <- anes_data |>
   mutate(Gay_Adopt = ifelse(Gay_Adopt == 1, "Support", "Oppose")) |>
   drop_na(Gay_Adopt)
 ```
-# Visualization
+
+# Dependent Variable Isolation and Corresponding Barplot
+
+```{r}
+total_dep_var <- anes_republican |>
+  group_by(Gay_Adopt) |>
+  summarize(Total = n())
+total_dep_var |>
+  ggplot(aes(x = Gay_Adopt, y = Total, fill = Gay_Adopt)) +
+  geom_bar(stat = "identity") +
+  labs(
+    title = "Overall Distribution of Dependent Variable (LGBT Adoption Sentiment)",
+    x = "Sentiment (Supports/Opposes)",
+    y = "Total Respondents")
+```
+
+
+# Main Relation Plot
 
 ```{r}
 ggplot(anes_republican, aes( x = Gay_Adopt, fill = Gay_Adopt)) +
