@@ -7,17 +7,21 @@ output:
     self_contained: false
 ---
 
-
-
-## Project Idea
+## Introduction:
 
 I am interested in exploring data related to...
 
 the immense changes we have witnessed occuring within the Republican party since the rise of Donald Trump. I would like to use various figures and statistical evidence to show numerous ways in which the Republican base has shifted since Donald Trump's rise to prominence during the 2016 election cycle. I want to analyze whether Trump's rise has fostered an increase in hateful rhetoric in the United States.
 
-## Project Milestone 2
+# Research Question: 
 
 To what extent has Donald Trump and the Maga-Era of Republican politics changed the compositions and backing of the GOP, how are these voters different/similar to Republican voters in the past, in regards to the social context of just how different politics feel to compared how they did during the Obama and Bush administrations, for instance.
+
+# Hypothesis: 
+
+I believe that Donald Trump's rise to prominence ahead of the 2016 presidential election led to an increase in prejudiced views/values being held by United States citizens, as his rhetoric and overall demeanor fostered a resurgence in anti-progressive views.
+
+# Why Did I choose this topic:
 
 I believe that Donald Trump's rise as the leader of the Republican party stems from a multitude of complex social, economic, and political factors. That is not exactly what I seek to answer. We all know that Donald Trump came to the scene different than any other politicians that remain in our recent memories, harping on racial messaging and xenophobic ideas, Donald Trump has managed to engage with an entirely new section of the political community that in previous elections did not care much for politics. He has become the living light of American conservatism by combining these new tactics with the historical agenda of the GOP. Economic conservatism combined with cultural conservatism has allowed Trump's grip on middle America to be virtually unquestioned, as seen in his successes across the board in nearly every American county in the 2024 election. 
 
@@ -28,14 +32,15 @@ So, in the light of Trump's rise and his recent re-taking of the White House, ha
 Most of us still clearly remember when gay marriage was officially legalized under the Obama administration. This enactment was met with plenty of conservative backlash, so, now, over a decade later in 2024, do conservatives, and particularly Trump voters hold more, less, or similar prejudice towards the LGBT+ community than during Obama's terms.
 
 
-Explanatory Variables:
-- Changes in voter demographics
-- changes in political ideology among voters (opinion on gay adoption)
+Explanatory Variable:
+- Before Trump era vs. After Trump Era
+- This is because we are trying to find a correlation in the rise of anti-LGBT sentiment starting during and continuing after Trump's ascension.
 
 Outcome Variable
-- Increases in size of the Republican Party, but more specifically, a morphing of its base. (Is there more opposition to LGBT+ adoption)
+-Is there more opposition to LGBT+ adoption?
+-Increases in the proportion and magnitude of Americans in opposition to LGBT+ adoption since 2016 would indicate that my hypothesis, is indeed correct.
 
-Support for my hypothesis would be found if I do in fact find sufficient evidence that hate or negative feelings towards the LGBT+ community and its members' attempts to start families has risen since Trump first started captivating Americans by the millions.
+In other words, support for my hypothesis would be found if I do in fact find sufficient evidence that hate or negative feelings towards the LGBT+ community and its members' attempts to start families has risen since Trump first started captivating Americans by the millions.
 
 ## Project Milestone 3
 
