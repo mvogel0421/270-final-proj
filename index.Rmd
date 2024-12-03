@@ -65,7 +65,9 @@ Describe the Data Source:
 The data used for this webpage was sourced from the American National Election Studies (ANES). ANES is a long-running American organization that has collected a plethora of different data points on American elections dating back to near the nation's inception. Aside from elections, ANES also regularly surveys and conducts questionnaires with the American people, in order to gauge political sentiments, momentum, or trends, within the American voting base during and in-between election cycles. ANES, for years, has allowed political scientists to sift through seemingly endless data about the American voter. In this study, wherein I am attempting to measure whether or not Donald Trump, since his rise to political prominence ahead of the 2016 election, has, through his rhetoric and campaigning, increased anti-LGBT sentiment in the Republican voter base. Namely, in the form of opposition to the right afforded to LGBT+ couples to adopt children. 
 
 How are the independent and dependent variables measured?:
-
+In this data set, there are many, many potential variables for analysis. For my own purposes, I have set aside the independent and dependent variables.
+In this study, the independent variable will be whether or not the sentiment collected from a respondent is from before, or after Trump's rise. (For the graphs, these will be separated into 'Pre-Trump' and 'Trump-Era'). This independent variable is measured by the time split which I have devised, 2016, which was the year Trump's first campaign really picked up and resulted in his victory. Before 2016 is categorized as Pre-Trump Sentiment, where as anything collected since 2016, is to be identified as a Trump-Era sentiment, belief, response, etc. 
+The dependent variable in this study is the respondent support for LGBT+ adoption. This is the dependent variable because we are expecting to see a change in this value, when the independent variable (pre or post Trump divisions) are introduced. This dependent variable is measured simply by respondents' answer to the ANES question regarding their support, or their opposition for such adoption openness. 
 
 #Preliminary Data Wrangling
 
@@ -102,6 +104,8 @@ total_dep_var |>
     y = "Total Respondents")
 ```
 Sources: American National Election Studies (ANES)
+
+In this plot of our dependent variable, we can see that throughout the two eras that have been devised, there are around ~6500 respondents,with a slight positive edge being given to the support side, which appears to have about 500 more affirmations than that of the oppose category. 
 
 ## Section 3: Results
 
@@ -148,3 +152,24 @@ model
 
 #Reflecting on the Results
 
+The first two code chunks and resulting outputs in this section involve our main area of interest. When split by pre and post-Trump responses, we can actually see, that since 2016, not only has the number of supporters of LGBT+ adoption risen, but the proportion has also increased drastically. Therefore, the initial hypothesis proposed at the beginning of this study, is likely incorrect. Regardless of his negative sentiment towards racial out groups and other marginalize members of society, Republican voters have not grown increasingly in opposition towards the basic rights of LGBT+ individuals.The nicely formatted table, along with the bar plot, tell us that before Trump's rise to prominence, of ANES respondents, 1,564 individuals opposed LGBT+ adoption, while 1001 supported it. This totals out to 2,565 Pre-Trump Respondents. Using some simple calculation, before Trump, ~60.1% of Republican voters did not agree with the idea that LGBT+ individuals and couples should be able to adopt their own children.
+As we move to analyze the figures, Post-Trump, the ultimate surprise is born. The table and bar plot tell us that while support for LGBT+ adoption rose drastically (all the way to 2,389 responses), opposition for the same policies actually DECREASED to a total of 1,389 in the negative. Using the same basic principles of addition and division, this yields a total of 3,778 responses, and, ~63.2% of them supported rights to LGBT+ adoption. 
+
+The pre and post-Trump eras made a complete flip in terms of Republican voter support for LGBT+ adoption. With a total percentage point swing of about 25%, and in an even larger, and therefore more valid sample, Republicans now almost overwhelmingly believe adoption rights should be reserved to all families, regardless of sexual orientation. 
+
+Clearly, the hypothesis of this experiment was flawed, in some way. As, most scholars, researchers, pundits, and casual observers would agree that Donald Trump introduced an unprecedented amount of bigoted speech and alienation of certain Americans in his 2016, 2020, and now 2024 presidential campaigns. Regardless of this, Republicans have markedly increased their support for the rights of LGBT+ people and families to adopt their own children and start families. In the conclusion to this study, I will explain a few reasons why I think this may have occured. 
+
+Moving to the logistic regression. The x-intercept of  ~ -0.44 suggests that yes, in fact, Pre-Trump Republican voters quite strongly were in opposition to endorsements of LGBT+ adoption. The highly postiive nature of the Trump-Era coefficient, of ~0.99, represents the strong swing of this reality in the Trump-Era, and that a Republican voter is veritably much more likely to support LGBT+ adoption than a Republican voter from times past.
+
+## Section 4: Conclusion
+
+1 paragraph (i) summarizing results and assessing the extent to which you find support for your hypothesis; (ii) describing limitations of the analysis and threats to inference (missing data, confounding, etc), and stating how you could improve your analysis if you had more time/money. (2pts)
+
+As I have already covered, the results of this test DISPROVE my hypothesis, to me, this is unfortunate, but eye-opening. To say it is not the best feeling to be wrong about a confidently made and logically linked hypothesis, would be a dramatic understatement, but that does not mean that something cannot be learned here.
+Despite what I understood about the Republican Party, especially contemporarily, as it continues to play-out its MAGA era, I was incorrect. Despite his brutish campaigning, verbal attacks on women, past history of misconduct, allegations of racism, homophobia, and other outrage against the party he belongs too, Donald Trump has somehow overseen an era where his voting base now strongly supports the protection of a key right of LGBT+ Americans. The modern Republican party supports LGBT+ adoption at a rate >63%, whereas, before Donald Trump, opposition to LGBT+ adoption sat at a similar number of 60%. In the past decades, election cycles, there has been a major 'flipping of the switch' within the Republican voter base clearly.
+
+In hindsight, I believe that this change is due to the overall progressions our society has made. Regardless of debates between the Republican and Democratic Party, which, especially in this past election cycle, was home to interesting advertsiements declaring that Kamala Harris was serving 'they/them' (an offensive remark regarding the use of gender non-specific pronouns by non-binary individuals), as opposed to Trump who worked for "YOU!", America, in recent years has become a more accepting, liberal place. As is the trend throughout all of American history, our society, culture, and other enterprises slowly, yet surely, keep up with the times and adjust to our perceptions of each other. Now, in the 21st century, it has never been safer or opportune to live a publicly or openly gay life. Gay marriage has been legal for over a decade now, and it has become almost a 'fact of life' to many. Regardless of what Donald Trump says, and what some of his fringe supporters may feel, the overall trend in America has been towards liberalization and the overall increasing openness of our institutions and society. 
+
+The limitations to this study were likely the limited scope of its nature. If I had access to even more resources, I could perform a full, cross-sectional study of various points and values regarding gay rights in the United States. Shifting the focus to other values aside from gay adoption would allow for a more in-depth look into Republican sentiments about their gay counterparts, and maybe, somewhere, since Trump's rise, there has been an increase in the opposotion to certain LGBT+ rallying points.
+
+At the end of the day, this study was very informational. We have learned that we cannot simply accredit Donald Trump with racial and sexual antagonism, as the numbers show that his supporters are in favor of some basic rights to these individuals, and for that reason, the whole party cannot rightfully, at all, be discounted as homophobic or anti-gay, no matter what you think of Donald J. Trump, the man.
