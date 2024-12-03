@@ -14,6 +14,7 @@ library(knitr)
 library(infer)
 library(dplyr)
 library(tidyverse)
+library(broom)
 ```
 
 ```{r}
@@ -60,9 +61,10 @@ In other words, support for my hypothesis would be found if I do in fact find su
 
 ## Section 2: Data
 
-Describe the Data Source
+Describe the Data Source:
+The data used for this webpage was sourced from the American National Election Studies (ANES). ANES is a long-running American organization that has collected a plethora of different data points on American elections dating back to near the nation's inception. Aside from elections, ANES also regularly surveys and conducts questionnaires with the American people, in order to gauge political sentiments, momentum, or trends, within the American voting base during and in-between election cycles. ANES, for years, has allowed political scientists to sift through seemingly endless data about the American voter. In this study, wherein I am attempting to measure whether or not Donald Trump, since his rise to political prominence ahead of the 2016 election, has, through his rhetoric and campaigning, increased anti-LGBT sentiment in the Republican voter base. Namely, in the form of opposition to the right afforded to LGBT+ couples to adopt children. 
 
-How are the independent and dependent variables measured?
+How are the independent and dependent variables measured?:
 
 
 #Preliminary Data Wrangling
@@ -99,9 +101,11 @@ total_dep_var |>
     x = "Sentiment (Supports/Opposes)",
     y = "Total Respondents")
 ```
+Sources: American National Election Studies (ANES)
 
+## Section 3: Results
 
-# Main Relation Plot
+# Main Relationship of Interest Plot
 
 ```{r}
 ggplot(anes_republican, aes( x = Gay_Adopt, fill = Gay_Adopt)) +
@@ -121,9 +125,7 @@ ggplot(anes_republican, aes( x = Gay_Adopt, fill = Gay_Adopt)) +
 ```
 Source: American National Election Studies (ANES)
 
-## Project Milestone 4
-
-#Second Visualization/Table
+#Second Visualization/Table Showing the Totals
 
 ```{r}
 library(knitr)
@@ -135,4 +137,14 @@ kable(sum_up_table, col.names = c("Era", "Position on LGBT+ Adoption of Children
 ```
 Source: American National Election Studies (ANES)
 
-This data proves my hypothesis wrong. Although Donald Trump's presidency and future term have been highlighted by various instances of racial, cultural antagonism, support for LGBT+ adoption has actually increased. This is very interesting to me. A major concern for liberals this cycle was Trump and his base's desire to limit freedoms for the LGBT+ community, but clearly, the majority of voters support the security of basic liberties and the ability to form a family for these individuals. Now, I am led to believe that this increase is in part due to the successes of previous administrations and continued efforts to de-stigmatize previously marginalized members of society. For years now, gay marriage has been legal, and at this point, Americans would likely categorize it as just a fact-of-life. Even if one is opposed to same-sex relations, the legality of their love and marriage is secured. Although Trump's campaign this year often focused on sex changes for illegals and other volatile rhetoric attacking those who identify with the pronouns they/them in our society, most of his supporters believe in basic rights for all of these people. Instead, his voters are much more likely to be uncomfortable with aspects of LGBT+ life bleeding into their own. This, of course, is a problem. We need our society to be more accepting of people, regardless of race, sexual orientation, creed, etc. Yet, in spite of this, there is no significant evidence proving that Donald Trump has led an effort to outright oppress and subjugate the LGBT+ community. 
+#Regression Output Model (Logistic Regression)
+
+```{r}
+anes_republican <- anes_republican |>
+  mutate(Gay_Adopt_Numeric = ifelse(Gay_Adopt == "Support", 1, 0))
+model <- glm(Gay_Adopt_Numeric ~ Era, data = anes_republican, family = "binomial")
+model
+```
+
+#Reflecting on the Results
+

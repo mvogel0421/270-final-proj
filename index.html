@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["anes_condensed.csv","index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/figure-html5/unnamed-chunk-3-1.png","index_files/header-attrs-2.17/header-attrs.js","index_files/header-attrs-2.27/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["anes_condensed.csv","index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/figure-html5/unnamed-chunk-3-1.png","index_files/figure-html5/unnamed-chunk-4-1.png","index_files/figure-html5/unnamed-chunk-5-1.png","index_files/header-attrs-2.17/header-attrs.js","index_files/header-attrs-2.27/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1543,22 +1543,16 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-article">
-<h2 id="project-idea">Project Idea</h2>
-<p>I am interested in exploring data related to…</p>
-<p>the immense changes we have witnessed occuring within the Republican party since the rise of Donald Trump. I would like to use various figures and statistical evidence to show numerous ways in which the Republican base has shifted since Donald Trump’s rise to prominence during the 2016 election cycle. I want to analyze whether Trump’s rise has fostered an increase in hateful rhetoric in the United States.</p>
-<h2 id="project-milestone-2">Project Milestone 2</h2>
-<p>To what extent has Donald Trump and the Maga-Era of Republican politics changed the compositions and backing of the GOP, how are these voters different/similar to Republican voters in the past, in regards to the social context of just how different politics feel to compared how they did during the Obama and Bush administrations, for instance.</p>
-<p>I believe that Donald Trump’s rise as the leader of the Republican party stems from a multitude of complex social, economic, and political factors. That is not exactly what I seek to answer. We all know that Donald Trump came to the scene different than any other politicians that remain in our recent memories, harping on racial messaging and xenophobic ideas, Donald Trump has managed to engage with an entirely new section of the political community that in previous elections did not care much for politics. He has become the living light of American conservatism by combining these new tactics with the historical agenda of the GOP. Economic conservatism combined with cultural conservatism has allowed Trump’s grip on middle America to be virtually unquestioned, as seen in his successes across the board in nearly every American county in the 2024 election.</p>
-<p>While Donald Trump has been generally careful to not say anything too outwardly offensive on a public platform, there is no doubt that his base and a large portion of his supporters carry such views and see Donald Trump as a protector of these forms of prejudice.</p>
-<p>So, in the light of Trump’s rise and his recent re-taking of the White House, has his, now, decade of political prominence resulted in an increase in hateful rhetoric and ideas. In this article, we will dive into measurements of support for LGBT+ families being able to adopt children. Has there been an increase in opposition to this basic right of an adult individual, or, in spite of Trump’s volatility and perceived bigotry, is our society becoming more pluralistic?</p>
-<p>Most of us still clearly remember when gay marriage was officially legalized under the Obama administration. This enactment was met with plenty of conservative backlash, so, now, over a decade later in 2024, do conservatives, and particularly Trump voters hold more, less, or similar prejudice towards the LGBT+ community than during Obama’s terms.</p>
-<p>Explanatory Variables:
-- Changes in voter demographics
-- changes in political ideology among voters (opinion on gay adoption)</p>
-<p>Outcome Variable
-- Increases in size of the Republican Party, but more specifically, a morphing of its base. (Is there more opposition to LGBT+ adoption)</p>
-<p>Support for my hypothesis would be found if I do in fact find sufficient evidence that hate or negative feelings towards the LGBT+ community and its members’ attempts to start families has risen since Trump first started captivating Americans by the millions.</p>
-<h2 id="project-milestone-3">Project Milestone 3</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://readr.tidyverse.org'>readr</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://yihui.org/knitr/'>knitr</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/tidymodels/infer'>infer</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://dplyr.tidyverse.org'>dplyr</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span>
@@ -1567,10 +1561,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span><span class='va'>anes_data</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"anes_condensed.csv"</span><span class='op'>)</span></span></code></pre>
 </div>
 </div>
-<p>Preliminary Data Wrangling</p>
+<h2 id="section-1-introduction">Section 1: Introduction:</h2>
+<p>I am interested in exploring data related to…</p>
+<p>the immense changes we have witnessed occuring within the Republican party since the rise of Donald Trump. I would like to use various figures and statistical evidence to show numerous ways in which the Republican base has shifted since Donald Trump’s rise to prominence during the 2016 election cycle. I want to analyze whether Trump’s rise has fostered an increase in hateful rhetoric in the United States.</p>
+<h1 id="research-question">Research Question:</h1>
+<p>To what extent has Donald Trump and the Maga-Era of Republican politics changed the compositions and backing of the GOP, how are these voters different/similar to Republican voters in the past, in regards to the social context of just how different politics feel to compared how they did during the Obama and Bush administrations, for instance.</p>
+<h1 id="hypothesis">Hypothesis:</h1>
+<p>I believe that Donald Trump’s rise to prominence ahead of the 2016 presidential election led to an increase in prejudiced views/values being held by United States citizens, as his rhetoric and overall demeanor fostered a resurgence in anti-progressive views.</p>
+<h1 id="why-did-i-choose-this-topic">Why Did I choose this topic:</h1>
+<p>I believe that Donald Trump’s rise as the leader of the Republican party stems from a multitude of complex social, economic, and political factors. That is not exactly what I seek to answer. We all know that Donald Trump came to the scene different than any other politicians that remain in our recent memories, harping on racial messaging and xenophobic ideas, Donald Trump has managed to engage with an entirely new section of the political community that in previous elections did not care much for politics. He has become the living light of American conservatism by combining these new tactics with the historical agenda of the GOP. Economic conservatism combined with cultural conservatism has allowed Trump’s grip on middle America to be virtually unquestioned, as seen in his successes across the board in nearly every American county in the 2024 election.</p>
+<p>While Donald Trump has been generally careful to not say anything too outwardly offensive on a public platform, there is no doubt that his base and a large portion of his supporters carry such views and see Donald Trump as a protector of these forms of prejudice.</p>
+<p>So, in the light of Trump’s rise and his recent re-taking of the White House, has his, now, decade of political prominence resulted in an increase in hateful rhetoric and ideas. In this article, we will dive into measurements of support for LGBT+ families being able to adopt children. Has there been an increase in opposition to this basic right of an adult individual, or, in spite of Trump’s volatility and perceived bigotry, is our society becoming more pluralistic?</p>
+<p>Most of us still clearly remember when gay marriage was officially legalized under the Obama administration. This enactment was met with plenty of conservative backlash, so, now, over a decade later in 2024, do conservatives, and particularly Trump voters hold more, less, or similar prejudice towards the LGBT+ community than during Obama’s terms.</p>
+<p>Explanatory Variable:
+- Before Trump era vs. After Trump Era
+- This is because we are trying to find a correlation in the rise of anti-LGBT sentiment starting during and continuing after Trump’s ascension.</p>
+<p>Outcome Variable
+-Is there more opposition to LGBT+ adoption?
+-Increases in the proportion and magnitude of Americans in opposition to LGBT+ adoption since 2016 would indicate that my hypothesis, is indeed correct.</p>
+<p>In other words, support for my hypothesis would be found if I do in fact find sufficient evidence that hate or negative feelings towards the LGBT+ community and its members’ attempts to start families has risen since Trump first started captivating Americans by the millions.</p>
+<h2 id="section-2-data">Section 2: Data</h2>
+<p>Describe the Data Source</p>
+<p>How are the independent and dependent variables measured?</p>
+<p>#Preliminary Data Wrangling</p>
 <p>I will be utilizing the below three data frames to see if there is a rise in anti-gay sentiment among republican voters, before vs. after Trump’s rise.</p>
 <p>Notes for renaming: VCF0004 is Year, VCF0302 IS Party Identification, VCF0878 is thoughts on gay adoption</p>
-<h1 id="filtration-and-wrangling">Filtration and Wrangling</h1>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>anes_republican</span> <span class='op'>&lt;-</span> <span class='va'>anes_data</span> <span class='op'>|&gt;</span></span>
@@ -1586,7 +1601,23 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span>  <span class='fu'><a href='https://tidyr.tidyverse.org/reference/drop_na.html'>drop_na</a></span><span class='op'>(</span><span class='va'>Gay_Adopt</span><span class='op'>)</span></span></code></pre>
 </div>
 </div>
-<h1 id="visualization">Visualization</h1>
+<h1 id="dependent-variable-isolation-and-corresponding-barplot">Dependent Variable Isolation and Corresponding Barplot</h1>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>total_dep_var</span> <span class='op'>&lt;-</span> <span class='va'>anes_republican</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>Gay_Adopt</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span><span class='op'>(</span>Total <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/context.html'>n</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>total_dep_var</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Gay_Adopt</span>, y <span class='op'>=</span> <span class='va'>Total</span>, fill <span class='op'>=</span> <span class='va'>Gay_Adopt</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_bar.html'>geom_bar</a></span><span class='op'>(</span>stat <span class='op'>=</span> <span class='st'>"identity"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span></span>
+<span>    title <span class='op'>=</span> <span class='st'>"Overall Distribution of Dependent Variable (LGBT Adoption Sentiment)"</span>,</span>
+<span>    x <span class='op'>=</span> <span class='st'>"Sentiment (Supports/Opposes)"</span>,</span>
+<span>    y <span class='op'>=</span> <span class='st'>"Total Respondents"</span><span class='op'>)</span></span></code></pre>
+</div>
+<p><img src="index_files/figure-html5/unnamed-chunk-4-1.png" width="624" /></p>
+</div>
+<h1 id="main-relation-plot">Main Relation Plot</h1>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>anes_republican</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span> x <span class='op'>=</span> <span class='va'>Gay_Adopt</span>, fill <span class='op'>=</span> <span class='va'>Gay_Adopt</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
@@ -1604,7 +1635,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span>  <span class='co'>#remove legend</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span>legend.position <span class='op'>=</span> <span class='st'>"none"</span><span class='op'>)</span></span></code></pre>
 </div>
-<p><img src="index_files/figure-html5/unnamed-chunk-3-1.png" width="624" /></p>
+<p><img src="index_files/figure-html5/unnamed-chunk-5-1.png" width="624" /></p>
 </div>
 <p>Source: American National Election Studies (ANES)</p>
 <h2 id="project-milestone-4">Project Milestone 4</h2>
@@ -1619,7 +1650,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span>      caption <span class='op'>=</span> <span class='st'>"Pre and Post-Trump Sentiment on LGBT Child Adoption"</span><span class='op'>)</span></span></code></pre>
 </div>
 <table>
-<caption><span id="tab:unnamed-chunk-4">Table 1: </span>Pre and Post-Trump Sentiment on LGBT Child Adoption</caption>
+<caption><span id="tab:unnamed-chunk-6">Table 1: </span>Pre and Post-Trump Sentiment on LGBT Child Adoption</caption>
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 54%" />
