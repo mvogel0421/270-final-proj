@@ -147,8 +147,9 @@ Source: American National Election Studies (ANES)
 anes_republican <- anes_republican |>
   mutate(Gay_Adopt_Numeric = ifelse(Gay_Adopt == "Support", 1, 0))
 model <- glm(Gay_Adopt_Numeric ~ Era, data = anes_republican, family = "binomial")
-model
+summary(model)
 ```
+
 
 #Reflecting on the Results
 
@@ -159,7 +160,9 @@ The pre and post-Trump eras made a complete flip in terms of Republican voter su
 
 Clearly, the hypothesis of this experiment was flawed, in some way. As, most scholars, researchers, pundits, and casual observers would agree that Donald Trump introduced an unprecedented amount of bigoted speech and alienation of certain Americans in his 2016, 2020, and now 2024 presidential campaigns. Regardless of this, Republicans have markedly increased their support for the rights of LGBT+ people and families to adopt their own children and start families. In the conclusion to this study, I will explain a few reasons why I think this may have occured. 
 
-Moving to the logistic regression. The x-intercept of  ~ -0.44 suggests that yes, in fact, Pre-Trump Republican voters quite strongly were in opposition to endorsements of LGBT+ adoption. The highly postiive nature of the Trump-Era coefficient, of ~0.99, represents the strong swing of this reality in the Trump-Era, and that a Republican voter is veritably much more likely to support LGBT+ adoption than a Republican voter from times past.
+Moving to the logistic regression. The x-intercept of  ~ -0.44 suggests that yes, in fact, Pre-Trump Republican voters quite strongly were in opposition to endorsements of LGBT+ adoption. The highly positive nature of the Trump-Era coefficient, of ~0.99, represents the strong swing of this reality in the Trump-Era, and that a Republican voter is veritably much more likely to support LGBT+ adoption than a Republican voter from times past.
+
+Finally, the p-value yielded by coding for the summary of the 'model' came out to be '<2e-16', an incredibly small number, much smaller than the alpha = 0.05. Because the p-value is less than the alpha, we reject the null hypothesis. This suggests that Donald Trump's presidency had the opposite effect that I expected and in fact, he led to an increase in the amount of support of LGBT+ adoption among Republican voters. While this is important in confirming that my hypothesis was incorrect, I do not think this means we can confidently claim Donald Trump actually caused this rise, and instead, the timing of his administration combined with several factors that independently caused the rise in support for LGBT+ adoption, most likely that our society is overall progressing towards higher inclusivity. 
 
 ## Section 4: Conclusion
 
@@ -170,6 +173,6 @@ Despite what I understood about the Republican Party, especially contemporarily,
 
 In hindsight, I believe that this change is due to the overall progressions our society has made. Regardless of debates between the Republican and Democratic Party, which, especially in this past election cycle, was home to interesting advertsiements declaring that Kamala Harris was serving 'they/them' (an offensive remark regarding the use of gender non-specific pronouns by non-binary individuals), as opposed to Trump who worked for "YOU!", America, in recent years has become a more accepting, liberal place. As is the trend throughout all of American history, our society, culture, and other enterprises slowly, yet surely, keep up with the times and adjust to our perceptions of each other. Now, in the 21st century, it has never been safer or opportune to live a publicly or openly gay life. Gay marriage has been legal for over a decade now, and it has become almost a 'fact of life' to many. Regardless of what Donald Trump says, and what some of his fringe supporters may feel, the overall trend in America has been towards liberalization and the overall increasing openness of our institutions and society. 
 
-The limitations to this study were likely the limited scope of its nature. If I had access to even more resources, I could perform a full, cross-sectional study of various points and values regarding gay rights in the United States. Shifting the focus to other values aside from gay adoption would allow for a more in-depth look into Republican sentiments about their gay counterparts, and maybe, somewhere, since Trump's rise, there has been an increase in the opposotion to certain LGBT+ rallying points.
+The limitations to this study were likely the limited scope of its nature. If I had access to even more resources, I could perform a full, cross-sectional study of various points and values regarding gay rights in the United States. Shifting the focus to other values aside from gay adoption would allow for a more in-depth look into Republican sentiments about their gay counterparts, and maybe, somewhere, since Trump's rise, there has been an increase in the opposition to certain LGBT+ rallying points.
 
 At the end of the day, this study was very informational. We have learned that we cannot simply accredit Donald Trump with racial and sexual antagonism, as the numbers show that his supporters are in favor of some basic rights to these individuals, and for that reason, the whole party cannot rightfully, at all, be discounted as homophobic or anti-gay, no matter what you think of Donald J. Trump, the man.
